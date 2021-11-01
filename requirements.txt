@@ -17,3 +17,4 @@ watchgod==0.7
 websockets==10.0
 pytest==6.2.5
 requests==2.26.0
+SQLAlchemy==1.4.26
