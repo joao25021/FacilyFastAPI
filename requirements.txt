@@ -15,3 +15,5 @@ typing-extensions==3.10.0.2
 uvicorn==0.15.0
 watchgod==0.7
 websockets==10.0
+pytest==6.2.5
+requests==2.26.0
