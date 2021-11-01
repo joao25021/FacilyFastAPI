@@ -20,7 +20,7 @@ def get_db():
 
 
 @app.post("/contato/",
-          response_model=schemas.ContatoCreate,
+          response_model=schemas.ContatoBase,
           description="Criar um novo contato",
           status_code=status.HTTP_201_CREATED,
           responses={400: {"description": "Numero de telefone{NUMERO} esta já registrado"}})
