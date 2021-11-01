@@ -1,5 +1,4 @@
-from sqlalchemy import Column, Integer, String, Table
-from database import meta, db_engine
+from sqlalchemy import Column, Integer, String
 
 from database import Base
 

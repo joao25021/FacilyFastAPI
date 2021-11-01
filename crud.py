@@ -1,7 +1,6 @@
 from sqlalchemy.orm import Session
 import models
 import schemas
-from database import conn
 
 
 def get_contato(db: Session, contato_id: int):
