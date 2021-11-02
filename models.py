@@ -10,4 +10,3 @@ class Contato(Base):
     sobrenome = Column(String(25))
     numerodetelefone = Column(Integer)
     email = Column(String(50), unique=True, index=True)
-

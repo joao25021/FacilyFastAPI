@@ -21,5 +21,3 @@ class ContatoCreate(BaseModel):
 
 class Contato(BaseModel):
     id: int
-
-

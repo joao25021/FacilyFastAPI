@@ -8,7 +8,11 @@ def get_contato(db: Session, contato_id: int):
 
 
 def get_contato_by_numero(db: Session, numerodetelefone: str):
-    return db.query(models.Contato).filter(models.Contato.numerodetelefone == numerodetelefone).first()
+    return (
+        db.query(models.Contato)
+        .filter(models.Contato.numerodetelefone == numerodetelefone)
+        .first()
+    )
 
 
 def get_contatos(db: Session, skip: int = 0, limit: int = 100):
@@ -16,11 +20,12 @@ def get_contatos(db: Session, skip: int = 0, limit: int = 100):
 
 
 def create_contato(db: Session, contato):
-    db_contato = models.Contato(nome=contato.nome,
-                                sobrenome=contato.sobrenome,
-                                numerodetelefone=contato.numerodetelefone,
-                                email=contato.email
-                                )
+    db_contato = models.Contato(
+        nome=contato.nome,
+        sobrenome=contato.sobrenome,
+        numerodetelefone=contato.numerodetelefone,
+        email=contato.email,
+    )
     db.add(db_contato)
     db.commit()
     db.refresh(db_contato)
