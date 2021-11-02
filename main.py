@@ -4,12 +4,13 @@ from sqlalchemy.orm import Session
 import crud
 import models
 import schemas
-from database import SessionLocal,criar_bd
+from database import SessionLocal, criar_bd
 from mangum import Mangum
 
 app = FastAPI()
 
 criar_bd()
+
 
 # Dependency
 def get_db():
@@ -119,7 +120,7 @@ def read_contato(contato_id: int, db: Session = Depends(get_db)):
     responses={404: {"description": "Contato não encontrado"}},
 )
 def update_contato(
-    contato_id: int, contato: schemas.ContatoCreate, db: Session = Depends(get_db)
+        contato_id: int, contato: schemas.ContatoCreate, db: Session = Depends(get_db)
 ):
     """ Realizar a atualização de um contato por **id**
         - **contato_id**:(int) required
@@ -170,4 +171,5 @@ def delete_users(contato_id: int, db: Session = Depends(get_db)):
     db_contato = crud.delete(contato_db, db)
     return db_contato
 
-handler = Mangum(app)
+
+handler = Mangum(app=app)
