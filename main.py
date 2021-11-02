@@ -1,4 +1,6 @@
 from typing import List
+
+import uvicorn
 from fastapi import Depends, FastAPI, HTTPException, status
 from sqlalchemy.orm import Session
 import crud
@@ -171,5 +173,8 @@ def delete_users(contato_id: int, db: Session = Depends(get_db)):
     db_contato = crud.delete(contato_db, db)
     return db_contato
 
+
+if __name__ == '__main__':
+    uvicorn.run(app, host="0.0.0.0",port=8000)
 
 handler = Mangum(app=app)
