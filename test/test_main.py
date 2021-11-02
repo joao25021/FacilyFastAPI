@@ -19,7 +19,7 @@ def test_create_contato():
             "email": "65string1234@"
         },
     )
-    assert response.status_code == 200
+    assert response.status_code == 400
 
 
 
