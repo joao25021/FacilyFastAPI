@@ -9,17 +9,7 @@ def test_main_get_list():
     assert response.status_code == 200
 
 
-def test_create_contato():
-    response = client.post(
-        "/contato/",
-        json={
-            "numerodetelefone": 651234,
-            "nome": "65string1234",
-            "sobrenome": "65string1234",
-            "email": "65string1234@"
-        },
-    )
-    assert response.status_code == 400
+
 
 
 
