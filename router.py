@@ -24,6 +24,7 @@ def get_db():
 
 @contato.post(
     "/contato/",
+    tags=["contatos"],
     response_model=schemas.ContatoBase,
     summary="Criar um novo contato",
     status_code=status.HTTP_201_CREATED,
@@ -59,6 +60,7 @@ def create_contato(contato: schemas.ContatoCreate, db: Session = Depends(get_db)
 
 @contato.get(
     "/contatos/",
+    tags=["contatos"],
     response_model=List[schemas.ContatoBase],
     summary="retorna uma lista de contatos",
     status_code=status.HTTP_200_OK,
@@ -82,6 +84,7 @@ def list_contato(skip: int = 0, limit: int = 100, db: Session = Depends(get_db))
 
 @contato.get(
     "/contatos/{contato_id}",
+    tags=["contatos"],
     response_model=schemas.ContatoBase,
     summary="Procurar contato pelo id",
     responses={404: {"description": "Contato não encontrado"}},
@@ -144,6 +147,7 @@ def update_contato(
 
 @contato.delete(
     "/contatos/{contato_id}",
+    tags=["contatos"],
     response_model=schemas.ContatoBase,
     summary="delete contato pelo Id",
     responses={404: {"description": "Contato não encontrado"}},
