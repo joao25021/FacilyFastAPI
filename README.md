@@ -4,11 +4,11 @@ FacilyFastAPI
 Esta é uma api com um banco de dado mysql, utilizado fastAPI um framework python com um foco em desenhpenho e ser intuitivo.
 
 ## Acessar api basta entrar na url
-http://ec2-18-116-59-123.us-east-2.compute.amazonaws.com:8000/docs
+http://ec2-18-117-85-144.us-east-2.compute.amazonaws.com:8000/docs
 
  * ou para documentação
  
-  http://ec2-18-116-59-123.us-east-2.compute.amazonaws.com:8000/redoc
+  http://ec2-18-117-85-144.us-east-2.compute.amazonaws.com:8000/redoc
 
 ## Estrutura de arquivo do projeto
 ```
@@ -33,7 +33,7 @@ http://ec2-18-116-59-123.us-east-2.compute.amazonaws.com:8000/docs
 
 * Entrar no client ssh :
 ```
-http://ec2-18-116-59-123.us-east-2.compute.amazonaws.com/
+http://ec2-18-117-85-144.us-east-2.compute.amazonaws.com/
 port 22
 usuario ubunto
 ```
