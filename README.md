@@ -19,7 +19,8 @@ http://ec2-18-116-59-123.us-east-2.compute.amazonaws.com:8000/docs
     ├── __init__.py 
     ├── crud.py   #interações com banco  
     ├── database.py #conexão com o banco
-    ├── main.py    #inciar servidor/ endpoints
+    ├── main.py    #iniciar servidor
+    ├── router.py  #endpoints
     ├── models.py  #criar e define as tabelas
     └── schemas.py  #pydantic com schemas 
 ```
