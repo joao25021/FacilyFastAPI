@@ -32,7 +32,7 @@ def get_db():
 )
 def create_contato(contato: schemas.ContatoCreate, db: Session = Depends(get_db)):
     """ Criar um novo contato
-        - **numerodetelefone**:(str) required
+        - **numerodetelefone**:(int) required
         - **nome**:(str) required
         - **sobrenome**:(str) required
         - **email**:(str) required
@@ -124,7 +124,7 @@ def update_contato(
         - **contato_id**:(int) required
 
         informações para atualizar (opicinal)
-        - **numerodetelefone**:(str)
+        - **numerodetelefone**:(int)
         - **nome**:(str)
         - **sobrenome**:(str)
         - **email**:(str)
